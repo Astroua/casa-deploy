@@ -11,7 +11,7 @@ wget --quiet https://svn.cv.nrao.edu/casa/linux_distro/release/el6/old/casa-rele
 
 sudo mkdir /usr/local/bin/CASA
 sudo mv casa-release-4.3.1-el6.tar.gz /usr/local/bin/CASA
-sudo cd /usr/local/bin/CASA
+cd /usr/local/bin/CASA
 sudo tar zxvf casa-release-4.3.1-el6.tar.gz
 sudo rm casa-release-4.3.1-el6.tar.gz
 
