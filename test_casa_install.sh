@@ -1,6 +1,8 @@
 
 # Test the casa install by running a reduction script with test data included in CASA
 
+cd $HOME
+
 mkdir test_reduction
 cd test_reduction
 
