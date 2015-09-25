@@ -3,7 +3,7 @@
 # Install CASA 4.3 on a debian based system
 
 # General software install
-sh $HOME/casa-deploy/general_install.sh
+# sh $HOME/casa-deploy/general_install.sh
 
 # CASA specifics install
 sudo apt-get update
