@@ -10,5 +10,7 @@ echo "export PATH=/home/travis/miniconda/bin:$PATH" >> $HOME/.bashrc
 echo "# conda path" >> $HOME/.profile
 echo "export PATH=/home/travis/miniconda/bin:$PATH" >> $HOME/.profile
 
+rm miniconda.sh
+
 sh $HOME/.profile
 conda update --yes conda
