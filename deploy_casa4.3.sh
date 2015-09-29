@@ -26,4 +26,4 @@ echo "Your username is "$HOME
 
 cd $HOME
 
-source $HOME/.bashrc
+sh $HOME/.bashrc

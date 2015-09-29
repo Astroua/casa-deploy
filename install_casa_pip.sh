@@ -12,4 +12,4 @@ python casa-python/setup_casapy_pip.py
 echo "# casa-pip" >> $HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/.casa/bin' >> $HOME/.bashrc
 
-source $HOME/.bashrc
+sh $HOME/.bashrc
