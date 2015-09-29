@@ -1,0 +1,41 @@
+STEPS TO INSTALL THE UVMULTIFIT PACKAGE:
+
+
+1.- Compile the C++ module. Just run:
+
+    python setup.py build_ext --inplace
+    
+    After this step, the file "_uvmultimodel.so" should have 
+    been created.
+
+2.- Copy the "uvmultifit.py", "GUI_All_PySide.py", and 
+    "_uvmultimodel.so" files into a destination directory. 
+    The name of this directory could be, e.g.
+
+         $HOME/.casa/Nordic_Tools/uvfit
+
+3.- Add the name of this directory into the CASA path. For 
+    this step, you must edit the file $HOME/.casa/init.py
+    and add:
+
+    import sys
+    sys.path.append("$HOME/.casa/Nordic_Tools/uvfit")
+
+4.- Load the module into CASA. You can do it from the init.py 
+    file or from inside CASA. To import the module from the 
+    init file, add the following line at the end of your 
+    $HOME/.casa/init.py:
+
+    import uvmultifit as uvm
+
+    To import the module from CASA, just execute the same 
+    line in a script, or at the CASA prompt.
+
+5.- ENJOY!
+
+
+Any feedback and bug report should be sent either to the ARC 
+Nordic Node (contact@nordic-alma.se) or to the source maintainer
+(ivan.marti-vidal@chalmers.se).
+
+

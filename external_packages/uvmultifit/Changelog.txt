@@ -1,0 +1,128 @@
+#################################
+Older versions: UVMULTIFIT 1.0
+                UVMULTIFIT 2.0b:
+                UVMULTIFIT 2.01
+                UVMULTIFIT 2.1.2
+                UVMULTIFIT 2.1.3
+
+Changelog for UVMULTIFIT 2.1.4-r1
+#################################
+
+- PATCH 2.1.4-r3:
+
+- More precise estimates of derivatives for the Hessian matrix, when using spectral-line mode.
+
+- Re-fitting with fine tunning was broken. Now, it is back again.
+
+- PATCH 2.1.4-r2:
+
+- The fit is not aborted if all visibilities of a 
+frequency channel are flagged and OneFitPErChannel = True.
+
+- Added a clarifying message about re-scaling of weigths after the fit.
+
+- Corrected bug: the power index of the weights used in the fit was 
+twice the one specified in "wgt_power". The effect of this 
+bug on the fitted parameters is small (typically within 1 sigma). It is
+similar to a re-tunning of the "robust" parameter when imaging with the 
+Briggs weighting.
+
+
+- NEW IN 2.1.4:
+
+1.- Changed two wrong explanations in the documentation
+(about meaning of pre-scaled reduced Chi-Squared and about
+relationship between axis-ratio definition and position angle)
+
+2.- New keyword 'only_flux', to accelerate fits of many 
+components with only their flux density as free parameter
+(e.g., for simple implementations of sparse-sampling 
+deconvolution techniques)
+
+3.- New keyword 'proper_motion', to correct for proper 
+motions of fast moving sources (e.g., binary stars) during 
+the fit, on-the-fly.
+
+4.- Corrected bug that broke the possibility of using MJDrange.
+Now, if user wants to refit the dataset (e.g., with a new MJDrange)
+the fit() function shall be called with "reinit_model=False", to 
+avoid memory leaks.
+
+TODO: Implement possibility of FITTING the proper motions.
+
+
+- NEW IN 2.1.3:
+
+1.- Improved convergence of Levenberg-Marquardt
+2.- Simulated full-pol data can now be fitted with no problems.
+
+
+
+- NEW IN 2.1.2:
+
+1.- Corrected bug that gave flipped coordinate offsets in IMMULTIFIT
+
+
+- NEW IN 2.01:
+
+1.- Improved convergence of LM.
+
+2.- Corrected bug that didn't read the coordinates shifts of mosaic observations IN NON-SIMULATED DATA.
+
+
+
+- NEW IN 2.0b:
+
+1.- Better memory handling in C++ extension.
+
+2.- Faster processing (less overhead with Python API)
+
+3.- Own implementation of Levenberg-Marquardt, to avoid the huge memory usage of the standard Scipy library (although at the cost of speed if the number of fitting parameters is large). 
+
+4.- Full support for CASA 4.2
+
+5.- Added keywords LMtune and SMPtune, to tune the parameters that control the Levenberg-Marquardt and the Simplex algorithm, respectively.
+
+6.- New feature in immultifit. Now, it also saves an image (cube) with the best-fit unconvolved model. BEWARE, however, of the "window effect", that will indeed convolve the model by the FT of the image FFT coverage. 
+
+
+- REMOVED:
+
+1.- Keyword clib is removed. Now, all processing is done with the C++ extension. User must compile it as explained in the README file.
+
+2.- Keywords rstep and rxtol are removed (now use the SMPtune keyword)
+
+3.- The GUI has been removed (PySide doesn't seem to work well with the current CASA release. We will try to add it back in a future version).
+
+
+- TODO:
+
+1.- Add full support for w projection (i.e., the case of large primary beams, instead of just many mosaic pointings with small primary beams).
+
+
+
+
+
+
+####################################################################
+# UVMULTIFIT WITH VERSIONS 1.* WILL STILL BE MAINTAINED, FOR THE USER
+# TO HAVE THE CHOICE OF USING THE SCIPY STANDARD LM LIBRARY.
+
+
+#################################
+Older versions: UVMULTIFIT 1.0
+                UVMULTIFIT 1.0b:
+                UVMULTIFIT 1.01
+
+Changelog for UVMULTIFIT 1.1.2
+#################################
+
+- NEW IN 1.1.2:
+
+1.- Corrected bug that gave flipped coordinate offsets in IMMULTIFIT
+2.- Corrected bug that didn't read the coordinates shifts of mosaic observations IN NON-SIMULATED DATA.
+
+
+
+
+
