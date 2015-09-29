@@ -25,3 +25,5 @@ echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH' >> $HOME/.ba
 echo "Your username is "$HOME
 
 cd $HOME
+
+source $HOME/.bashrc
