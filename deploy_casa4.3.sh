@@ -20,11 +20,8 @@ cd /usr/local/bin/CASA
 sudo tar zxvf casa-release-4.3.1-el6.tar.gz
 sudo rm casa-release-4.3.1-el6.tar.gz
 
-export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH
+echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH' >> $HOME/.bashrc
 
 echo "Your username is "$HOME
 
 cd $HOME
-
-echo "Now I'm going to run a quick test of CASA and make sure it's working"
-sh $HOME/casa-deploy/test_casa_install.sh
