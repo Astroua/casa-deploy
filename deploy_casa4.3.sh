@@ -21,9 +21,3 @@ sudo tar zxvf casa-release-4.3.1-el6.tar.gz
 sudo rm casa-release-4.3.1-el6.tar.gz
 
 echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH' >> $HOME/.bashrc
-
-echo "Your username is "$HOME
-
-cd $HOME
-
-sh $HOME/.bashrc

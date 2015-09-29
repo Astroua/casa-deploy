@@ -8,5 +8,3 @@ chmod +x miniconda.sh
 echo "# conda path" >> $HOME/.bashrc
 echo "export PATH=/home/travis/miniconda/bin:$PATH" >> $HOME/.bashrc
 conda update --yes conda
-
-sh $HOME/.bashrc
