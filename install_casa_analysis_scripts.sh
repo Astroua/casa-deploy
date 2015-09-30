@@ -10,5 +10,5 @@ rm analysis_scripts.tar
 
 echo "# Analysis scripts" >> $HOME/.casa/init.py
 echo "import sys" >> $HOME/.casa/init.py
-echo "sys.path.append('"${path_to_scripts}"'')"  >> $HOME/.casa/init.py
+echo "sys.path.append('"${path_to_scripts}"')"  >> $HOME/.casa/init.py
 echo "import analysisUtils as au"  >> $HOME/.casa/init.py
