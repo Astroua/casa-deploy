@@ -10,7 +10,8 @@ cd $HOME
 
 git clone https://github.com/PaulHancock/Aegean.git
 
-$HOME/miniconda/bin/conda install --yes scipy lmfit astropy blist
+$HOME/miniconda/bin/conda install --yes scipy astropy blist
+$HOME/miniconda/bin/pip install lmfit
 
 echo "# Aegean" >> $HOME/.bashrc
-echo "PATH="$PATH:$HOME/Aegean/"
+echo "PATH='$PATH:$HOME/Aegean/'"
