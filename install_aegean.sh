@@ -2,7 +2,7 @@
 
 # License under the MIT License - see LICENSE
 
-# Installs the Aegean source finder to the CASA environment
+# Installs the Aegean source finder to the Miniconda environment
 # https://github.com/PaulHancock/Aegean
 
 cd $HOME
