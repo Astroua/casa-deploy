@@ -5,6 +5,8 @@
 # General software install
 # sh $HOME/casa-deploy/general_install.sh
 
+# One argument must be given to the casa_initialize.py script in this repo.
+
 # CASA specifics install
 sudo apt-get update
 sudo apt-get install -y  \
@@ -23,5 +25,8 @@ sudo rm casa-release-4.3.1-el6.tar.gz
 # Change the ownership of casa to the user
 sudo chown -R $USER:$USER /usr/local/bin/CASA
 
-echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH' >> $HOME/.profile
-echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6:$PATH' >> $HOME/.bashrc
+echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/:$PATH' >> $HOME/.profile
+echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/:$PATH' >> $HOME/.bashrc
+
+# CASA needs to be initialized, so make it run an empty script
+/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/casa --nologger --log2term -c ${1}
