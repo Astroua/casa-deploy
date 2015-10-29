@@ -14,7 +14,7 @@ sudo apt-get install -y  \
     libxrandr2 libxfixes3 libxcursor1 libxinerama1 libfontconfig1 libsqlite3-0 libxslt1.1 \
     bsdmainutils libcurl4-openssl-dev libxft2
 
-wget --quiet https://svn.cv.nrao.edu/casa/linux_distro/release/el6/old/casa-release-4.3.1-el6.tar.gz
+wget --quiet https://svn.cv.nrao.edu/casa/linux_distro/release/el6/casa-release-4.3.1-el6.tar.gz
 
 sudo mkdir /usr/local/bin/CASA
 sudo mv casa-release-4.3.1-el6.tar.gz /usr/local/bin/CASA
