@@ -29,4 +29,4 @@ echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/:$PATH' >> $HOM
 echo 'export PATH=/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/:$PATH' >> $HOME/.bashrc
 
 # CASA needs to be initialized, so make it run an empty script
-/usr/local/bin/CASA/casa-release-4.3.1-el6/bin/casa --nologger --log2term -c ${1}
+# /usr/local/bin/CASA/casa-release-4.3.1-el6/bin/casa --nologger --log2term -c ${1}
