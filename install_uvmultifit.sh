@@ -5,12 +5,12 @@
 # Pass the location where uvmultifit is
 # Also requires casa-python be installed
 
-sudo apt-get install -y gcc g++ libgsl0ldbl gsl-bin libgsl0-dev
+# sudo apt-get install -y gcc g++ libgsl2
 
-path_to_multifit=${1}
+# path_to_multifit=${1}
 
-cd ${path_to_multifit}
+# cd ${path_to_multifit}
 
-casa-python setup.py install
+# casa-python setup.py install
 
-cd $HOME
+# cd $HOME
